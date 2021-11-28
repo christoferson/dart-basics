@@ -19,6 +19,34 @@ void demoFunctions() {
     print(format("Call Function multiply with 3 and 7: ", multiply, 3, 7));
 }
 
+// 
+
+bool condition(int x) {
+  if (x % 2 == 0) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+List<int> filter(Iterable<int> numbers, bool Function(int) f) {
+  var evenNumbers = <int>[];
+  for (var i in numbers) {
+    if (f(i)) {
+      evenNumbers.add(i);
+    }
+  }
+
+  return evenNumbers;
+}
+
+void demoControlFlow() {
+  var numbers = List.generate(10, (i) => i);
+  print(filter(numbers, condition));
+}
+
+
 void main() {
   demoFunctions();
+  demoControlFlow();
 }
