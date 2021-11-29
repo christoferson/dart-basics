@@ -1,3 +1,4 @@
+import 'dart:math' as math;
 
 // A function declaration.
 int multiply(int x, int y) {
@@ -9,7 +10,7 @@ int multiplyByNine(int x) => multiply(multiply(x, 3), 3);
 
 // Functions are objects.
 String format(String title, int Function(int, int) f, int x, int y) {
-  return '${title} ${f(x, y)}';
+  return '$title ${f(x, y)}';
 }
 
 void demoFunctions() {
@@ -46,7 +47,27 @@ void demoControlFlow() {
 }
 
 
+// 
+
+void demoStrings() {
+  print('a single quoted string');
+  print("a double quoted string");
+
+  // Strings can be combined by placing them adjacent to each other.
+  print('cat' 'dog');
+
+  // Triple quotes define a multi-line string.
+  print('''triple quoted strings
+are for multiple lines''');
+
+  // Dart supports string interpolation.
+  final pi = math.pi;
+  print('pi is $pi');
+  print('tau is ${2 * pi}');  
+}
+
 void main() {
   demoFunctions();
   demoControlFlow();
+  demoStrings();
 }
