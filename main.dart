@@ -82,6 +82,23 @@ void demoCollectionList() {
 
 }
 
+//
+
+// A map literal.
+const map = {
+  'He': 'Helium',
+  'Ne': 'Neon',
+  'Ar': 'Argon',
+};
+
+void demoCollectionsMap() {
+
+  print(map['Ne']);
+  print(map.keys);
+  print(map.containsKey("Ar"));
+
+}
+
 void main() {
   demoFunctions();
   demoControlFlow();
