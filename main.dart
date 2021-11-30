@@ -66,8 +66,25 @@ are for multiple lines''');
   print('tau is ${2 * pi}');  
 }
 
+//
+
+// A list literal.
+const list = [4, 8, 15, 16, 23, 42];
+
+
+
+void demoCollectionList() {
+
+  print(list.first);
+  print(list.last);
+  print(list.reversed);
+  print(list.length);
+
+}
+
 void main() {
   demoFunctions();
   demoControlFlow();
   demoStrings();
+  demoCollectionList();
 }
