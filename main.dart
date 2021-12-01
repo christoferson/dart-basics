@@ -99,9 +99,26 @@ void demoCollectionsMap() {
 
 }
 
+//
+
+// A set literal.
+const mset = {
+  'Tree',
+  'Poison dart',
+  'Glass',
+};
+
+void demoCollectionsSet() {
+
+  print(mset.difference({'Poison dart'}));
+  print(mset.join(","));
+
+}
+
 void main() {
   demoFunctions();
   demoControlFlow();
   demoStrings();
   demoCollectionList();
+  demoCollectionsSet();
 }
