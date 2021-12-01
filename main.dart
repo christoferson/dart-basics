@@ -14,7 +14,7 @@ String format(String title, int Function(int, int) f, int x, int y) {
 }
 
 void demoFunctions() {
-
+    print("********** Functions ********** ");
     print('5 times 3 is ${multiply(5, 3)}');
     print('5 times 9 is ${multiplyByNine(5)}');
     print(format("Call Function multiply with 3 and 7: ", multiply, 3, 7));
@@ -42,6 +42,7 @@ List<int> filter(Iterable<int> numbers, bool Function(int) f) {
 }
 
 void demoControlFlow() {
+  print("********** Control Flow ********** ");
   var numbers = List.generate(10, (i) => i);
   print(filter(numbers, condition));
 }
@@ -50,6 +51,9 @@ void demoControlFlow() {
 // 
 
 void demoStrings() {
+
+  print("********** Strings ********** ");
+
   print('a single quoted string');
   print("a double quoted string");
 
@@ -75,6 +79,8 @@ const list = [4, 8, 15, 16, 23, 42];
 
 void demoCollectionList() {
 
+  print("********** List ********** ");
+
   print(list.first);
   print(list.last);
   print(list.reversed);
@@ -93,6 +99,8 @@ const map = {
 
 void demoCollectionsMap() {
 
+  print("********** Map ********** ");
+
   print(map['Ne']);
   print(map.keys);
   print(map.containsKey("Ar"));
@@ -109,6 +117,8 @@ const mset = {
 };
 
 void demoCollectionsSet() {
+
+  print("********** Set ********** ");
 
   print(mset.difference({'Poison dart'}));
   print(mset.join(","));
