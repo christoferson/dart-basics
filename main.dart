@@ -125,10 +125,59 @@ void demoCollectionsSet() {
 
 }
 
+//
+
+// Abstract classes can't be instantiated.
+abstract class Item {
+  void use();
+}
+
+class Chest<T> {
+  final List<T> contents;
+
+  // Constructors can assign arguments to instance variables using `this`.
+  Chest(this.contents);
+
+  void peek() => print('$this has ${contents.length} items.');
+}
+
+// Classes can implement other classes.
+class Sword implements Item {
+  int get damage => 5;
+
+  @override
+  void use() => print('$this dealt $damage damage.');
+}
+
+// Classes can extend other classes.
+class BroadSword extends Sword {
+  @override
+  final int damage = 50;
+}
+
+void demoClass() {
+
+  print("********** Class ********** ");
+
+  // The 'new' keyword is optional.
+  var chest = Chest<Item>([
+    BroadSword(),
+    Sword(),
+  ]);
+
+  chest.peek();
+
+  for (final item in chest.contents) {
+    item.use();
+  }
+
+}
+
 void main() {
   demoFunctions();
   demoControlFlow();
   demoStrings();
   demoCollectionList();
   demoCollectionsSet();
+  demoClass();
 }
